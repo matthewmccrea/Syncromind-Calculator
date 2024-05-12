@@ -41,8 +41,8 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.TxtDisplay1 = new System.Windows.Forms.TextBox();
             this.TextDisplay2 = new System.Windows.Forms.TextBox();
+            this.TextDisplay1 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -177,6 +177,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
@@ -235,37 +236,37 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // TxtDisplay1
-            // 
-            this.TxtDisplay1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.TxtDisplay1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDisplay1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TxtDisplay1.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDisplay1.ForeColor = System.Drawing.Color.Silver;
-            this.TxtDisplay1.Location = new System.Drawing.Point(0, 80);
-            this.TxtDisplay1.Margin = new System.Windows.Forms.Padding(0);
-            this.TxtDisplay1.Multiline = true;
-            this.TxtDisplay1.Name = "TxtDisplay1";
-            this.TxtDisplay1.Size = new System.Drawing.Size(371, 25);
-            this.TxtDisplay1.TabIndex = 5;
-            this.TxtDisplay1.Text = "0";
-            this.TxtDisplay1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // TextDisplay2
             // 
-            this.TextDisplay2.BackColor = System.Drawing.Color.Silver;
+            this.TextDisplay2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.TextDisplay2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextDisplay2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TextDisplay2.Font = new System.Drawing.Font("Gadugi", 30F, System.Drawing.FontStyle.Bold);
-            this.TextDisplay2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TextDisplay2.Location = new System.Drawing.Point(0, 105);
+            this.TextDisplay2.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextDisplay2.ForeColor = System.Drawing.Color.Silver;
+            this.TextDisplay2.Location = new System.Drawing.Point(0, 80);
             this.TextDisplay2.Margin = new System.Windows.Forms.Padding(0);
             this.TextDisplay2.Multiline = true;
             this.TextDisplay2.Name = "TextDisplay2";
-            this.TextDisplay2.Size = new System.Drawing.Size(371, 50);
-            this.TextDisplay2.TabIndex = 6;
+            this.TextDisplay2.Size = new System.Drawing.Size(371, 25);
+            this.TextDisplay2.TabIndex = 5;
             this.TextDisplay2.Text = "0";
             this.TextDisplay2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // TextDisplay1
+            // 
+            this.TextDisplay1.BackColor = System.Drawing.Color.Silver;
+            this.TextDisplay1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextDisplay1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TextDisplay1.Font = new System.Drawing.Font("Gadugi", 30F, System.Drawing.FontStyle.Bold);
+            this.TextDisplay1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TextDisplay1.Location = new System.Drawing.Point(0, 105);
+            this.TextDisplay1.Margin = new System.Windows.Forms.Padding(0);
+            this.TextDisplay1.Multiline = true;
+            this.TextDisplay1.Name = "TextDisplay1";
+            this.TextDisplay1.Size = new System.Drawing.Size(371, 50);
+            this.TextDisplay1.TabIndex = 6;
+            this.TextDisplay1.Text = "0";
+            this.TextDisplay1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button8
             // 
@@ -430,7 +431,7 @@
             this.ButtonDivision.TabIndex = 7;
             this.ButtonDivision.Text = "/";
             this.ButtonDivision.UseVisualStyleBackColor = false;
-            this.ButtonDivision.Click += new System.EventHandler(this.button19_Click);
+            this.ButtonDivision.Click += new System.EventHandler(this.Math_Operations);
             // 
             // button17
             // 
@@ -488,7 +489,7 @@
             this.ButtonMultiplication.TabIndex = 7;
             this.ButtonMultiplication.Text = "*";
             this.ButtonMultiplication.UseVisualStyleBackColor = false;
-            this.ButtonMultiplication.Click += new System.EventHandler(this.button19_Click);
+            this.ButtonMultiplication.Click += new System.EventHandler(this.Math_Operations);
             // 
             // ButtonEight
             // 
@@ -548,7 +549,7 @@
             this.ButtonSubstraction.TabIndex = 7;
             this.ButtonSubstraction.Text = "-";
             this.ButtonSubstraction.UseVisualStyleBackColor = false;
-            this.ButtonSubstraction.Click += new System.EventHandler(this.button19_Click);
+            this.ButtonSubstraction.Click += new System.EventHandler(this.Math_Operations);
             // 
             // ButtonFive
             // 
@@ -608,7 +609,7 @@
             this.ButtonAdd.TabIndex = 7;
             this.ButtonAdd.Text = "+";
             this.ButtonAdd.UseVisualStyleBackColor = false;
-            this.ButtonAdd.Click += new System.EventHandler(this.button19_Click);
+            this.ButtonAdd.Click += new System.EventHandler(this.Math_Operations);
             // 
             // ButtonTwo
             // 
@@ -668,7 +669,7 @@
             this.ButtonEquals.TabIndex = 7;
             this.ButtonEquals.Text = "=";
             this.ButtonEquals.UseVisualStyleBackColor = false;
-            this.ButtonEquals.Click += new System.EventHandler(this.button19_Click);
+            this.ButtonEquals.Click += new System.EventHandler(this.Button_Equals_Click);
             // 
             // ButtonZero
             // 
@@ -735,8 +736,8 @@
             this.Controls.Add(this.ButtonNine);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.ButtonC);
+            this.Controls.Add(this.TextDisplay1);
             this.Controls.Add(this.TextDisplay2);
-            this.Controls.Add(this.TxtDisplay1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelTitle);
             this.Controls.Add(this.panel1);
@@ -769,8 +770,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox TxtDisplay1;
         private System.Windows.Forms.TextBox TextDisplay2;
+        private System.Windows.Forms.TextBox TextDisplay1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
