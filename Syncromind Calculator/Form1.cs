@@ -86,14 +86,14 @@ namespace Syncromind_Calculator
             if (TxtDisplay1.Text == "0" || enterValue) TxtDisplay1.Text = string.Empty;
             
             enterValue = false;
-            Button button = new Button();
+            Button button = (Button) sender;
             if (button.Text == ".")
             {
                 if (TxtDisplay1.Text.Contains("."))
                     TxtDisplay1.Text = TxtDisplay1.Text + button.Text;
             }
             else TxtDisplay1.Text = TxtDisplay1.Text + button.Text;
-            { }
+            
         }
     }
 }
