@@ -11,7 +11,15 @@ using System.Windows.Forms;
 namespace Syncromind_Calculator
 {
     public partial class Form1 : Form
+
+        
+
     {
+
+        Double result = 0;
+        string operation = string.Empty;
+        string fstNumber, secNum;
+        bool enterValue = false;
         public Form1()
         {
             InitializeComponent();
@@ -65,6 +73,27 @@ namespace Syncromind_Calculator
         private void button19_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_Number_Clicks(object sender, EventArgs e)
+        {
+
+            if (TxtDisplay1.Text == "0" || enterValue) TxtDisplay1.Text = string.Empty;
+            
+            enterValue = false;
+            Button button = new Button();
+            if (button.Text == ".")
+            {
+                if (TxtDisplay1.Text.Contains("."))
+                    TxtDisplay1.Text = TxtDisplay1.Text + button.Text;
+            }
+            else TxtDisplay1.Text = TxtDisplay1.Text + button.Text;
+            { }
         }
     }
 }
