@@ -101,7 +101,6 @@
             this.PanelTitle.Name = "PanelTitle";
             this.PanelTitle.Size = new System.Drawing.Size(371, 40);
             this.PanelTitle.TabIndex = 1;
-            this.PanelTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelTitle_Paint);
             // 
             // label1
             // 
@@ -187,7 +186,6 @@
             this.button1.Size = new System.Drawing.Size(40, 38);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -265,7 +263,6 @@
             this.TextDisplay1.Name = "TextDisplay1";
             this.TextDisplay1.Size = new System.Drawing.Size(371, 50);
             this.TextDisplay1.TabIndex = 6;
-            this.TextDisplay1.Text = "0";
             this.TextDisplay1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button8
@@ -279,7 +276,6 @@
             this.button8.TabIndex = 8;
             this.button8.Text = "M^";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -292,7 +288,6 @@
             this.button9.TabIndex = 8;
             this.button9.Text = "MS";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button8_Click);
             // 
             // button10
             // 
@@ -305,7 +300,6 @@
             this.button10.TabIndex = 8;
             this.button10.Text = "M-";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button8_Click);
             // 
             // button12
             // 
@@ -318,7 +312,6 @@
             this.button12.TabIndex = 8;
             this.button12.Text = "M+";
             this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button8_Click);
             // 
             // button13
             // 
@@ -331,7 +324,6 @@
             this.button13.TabIndex = 8;
             this.button13.Text = "MR";
             this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button8_Click);
             // 
             // button14
             // 
@@ -344,7 +336,6 @@
             this.button14.TabIndex = 8;
             this.button14.Text = "MC";
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button8_Click);
             // 
             // ButtonCe
             // 
@@ -373,7 +364,6 @@
             this.ButtonC.TabIndex = 7;
             this.ButtonC.Text = "C";
             this.ButtonC.UseVisualStyleBackColor = false;
-            this.ButtonC.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
@@ -401,7 +391,6 @@
             this.ButtonErase.Size = new System.Drawing.Size(80, 48);
             this.ButtonErase.TabIndex = 7;
             this.ButtonErase.UseVisualStyleBackColor = true;
-            this.ButtonErase.Click += new System.EventHandler(this.button19_Click);
             // 
             // button11
             // 
@@ -416,7 +405,6 @@
             this.button11.TabIndex = 7;
             this.button11.Text = "RAIZ";
             this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button19_Click);
             // 
             // ButtonDivision
             // 
@@ -748,7 +736,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+          //  this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelTitle.ResumeLayout(false);
             this.PanelTitle.PerformLayout();
             this.panel2.ResumeLayout(false);

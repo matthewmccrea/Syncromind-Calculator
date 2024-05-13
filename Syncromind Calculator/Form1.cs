@@ -18,85 +18,47 @@ namespace Syncromind_Calculator
 
         Double result = 0;
         string operation = string.Empty;
-        string fstNumber, secNum;
+        string fstNum, secNum;
         bool enterValue = false;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void PanelTitle_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button24_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
+        //Este metodo verifica su result no es nulo, una vez verificado. Se simula un click al Button_Equals.
+        //Si result es igual a 0, significa que es la primera operacion realizada. En ese caso se asigna el valor de TextDisplay1 a la variable result.
+        //Se obtiene una referencia de del boton que desencadena el evento utilizando 'sender'
+        //Se asigna el texto del boton a la variable operacion
+        //Se marca la variable enterValue como true. Para indicar que se espera agregar otro valor
         private void Math_Operations(object sender, EventArgs e)
         {
-            if (result != 0)ButtonEquals.PerformClick();
-            else result = Double.Parse(TextDisplay2.Text);
+            if (result != 0) ButtonEquals.PerformClick();
+            else result = Double.Parse(TextDisplay1.Text);
+
             Button button = (Button)sender;
             operation = button.Text;
             enterValue = true;
-            if (TextDisplay2.Text != "0") { 
-
-                TextDisplay2.Text= fstNumber=$"{result}{operation}";
+            if (TextDisplay1.Text!="0")
+            {
+                TextDisplay2.Text = fstNum = $"{result}{operation}";
                 TextDisplay1.Text = string.Empty;
             }
+
+
         }
 
-        private void Button_Equals_Click(object sender, EventArgs e)
+
+        //Se guarda el segundo numero ingresado en la Variable secNum,
+        //Actualiza el cuadro de texto TextDisplay2 para mostrar la operacion completa, concatenando el contenido actual de TextDisplay2 con el secNum y el signo =
+        //Verifica si TextDisplay1 no esta vacio, si el texto en Text Display1 es igual a 0, se borra el contenido del cuadro TextDisplay2
+        //Se utiliza un switch para determinar que operacion matemaitca se debe realizar.
+        //Realiza la operacion entre el primer numero, la operacion y el segundo numero
+
+            private void Button_Equals_Click(object sender, EventArgs e)
         {
-            secNum=TextDisplay1.Text;
+            secNum = TextDisplay1.Text;
             TextDisplay2.Text = $"{TextDisplay2.Text}{TextDisplay1.Text}=";
             if (TextDisplay1.Text!=string.Empty)
             {
@@ -124,21 +86,37 @@ namespace Syncromind_Calculator
                 }
             }
         }
+        
+        
 
+       //Este metodo verifica si el texto dentro de TextDisplay1 es 0 o si enterValue es true
+       //Si los criterios se cumplen borra el contenido de TextDisplay1 en preparacion para un nuevo numero
+       //Establece en false la varibale enterValue para indicar que no es necesario ingresar nuevo valor
+       //Obtiene una referencia al boton que desencadeno el evento 
+       //Si el texto del button es decimal verifica si textDisplay ya contiene un punto decimal, si no es asi no lo agrega
+       //Si no hay punto decimal, lo agrega
         private void Button_Number_Clicks(object sender, EventArgs e)
         {
 
             if (TextDisplay1.Text == "0" || enterValue) TextDisplay1.Text = string.Empty;
-            
-            enterValue = false;
-            Button button = (Button) sender;
+
+            enterValue= false;
+
+            Button button = (Button)sender;
             if (button.Text == ".")
             {
                 if (TextDisplay1.Text.Contains("."))
                     TextDisplay1.Text = TextDisplay1.Text + button.Text;
+                
             }
-            else TextDisplay1.Text = TextDisplay1.Text + button.Text;
+
+            else    TextDisplay1.Text = TextDisplay1.Text + button.Text;
             
+
+
+
+
         }
-    }
+
+        }
 }
