@@ -350,6 +350,7 @@
             this.ButtonCe.TabIndex = 7;
             this.ButtonCe.Text = "CE";
             this.ButtonCe.UseVisualStyleBackColor = false;
+            this.ButtonCe.Click += new System.EventHandler(this.Button_CE_Click);
             // 
             // ButtonC
             // 
@@ -364,6 +365,7 @@
             this.ButtonC.TabIndex = 7;
             this.ButtonC.Text = "C";
             this.ButtonC.UseVisualStyleBackColor = false;
+            this.ButtonC.Click += new System.EventHandler(this.Button_C_Click);
             // 
             // button20
             // 
@@ -391,6 +393,7 @@
             this.ButtonErase.Size = new System.Drawing.Size(80, 48);
             this.ButtonErase.TabIndex = 7;
             this.ButtonErase.UseVisualStyleBackColor = true;
+            this.ButtonErase.Click += new System.EventHandler(this.Button_Erase_Click);
             // 
             // button11
             // 
@@ -736,7 +739,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-          //  this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelTitle.ResumeLayout(false);
             this.PanelTitle.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -86,15 +86,44 @@ namespace Syncromind_Calculator
                 }
             }
         }
-        
+        //Este metodo verifica si en el TextDisplay1 hay al menos un caracter.
+        //Luego elimina el ultimo caracter de la cadena
+        //Verifica si el TextDisplay1 esta vacio una vez borrado el caracter
+        //Si el cuadro de texto esta vacio establecer un 0
+        private void Button_Erase_Click(object sender, EventArgs e)
+        {
+            if (TextDisplay1.Text.Length > 0)
+                TextDisplay1.Text = TextDisplay1.Text.Remove(TextDisplay1.Text.Length - 1,1);
+            if (TextDisplay1.Text == string.Empty) TextDisplay1.Text = "0";
+            
+                
         
 
-       //Este metodo verifica si el texto dentro de TextDisplay1 es 0 o si enterValue es true
-       //Si los criterios se cumplen borra el contenido de TextDisplay1 en preparacion para un nuevo numero
-       //Establece en false la varibale enterValue para indicar que no es necesario ingresar nuevo valor
-       //Obtiene una referencia al boton que desencadeno el evento 
-       //Si el texto del button es decimal verifica si textDisplay ya contiene un punto decimal, si no es asi no lo agrega
-       //Si no hay punto decimal, lo agrega
+
+        }
+
+        //Este metodo setea ambos DisplayText1 y DisplayText2 en 0 o empty
+        private void Button_C_Click(object sender, EventArgs e)
+        {
+            TextDisplay1.Text = "0";
+            TextDisplay2.Text = string.Empty;
+            result = 0;
+        }
+
+        //Este metodo unicamente setea el DisplayText1 en 0
+        private void Button_CE_Click(object sender, EventArgs e)
+        {
+            TextDisplay1.Text = "0";
+        }
+
+
+
+        //Este metodo verifica si el texto dentro de TextDisplay1 es 0 o si enterValue es true
+        //Si los criterios se cumplen borra el contenido de TextDisplay1 en preparacion para un nuevo numero
+        //Establece en false la varibale enterValue para indicar que no es necesario ingresar nuevo valor
+        //Obtiene una referencia al boton que desencadeno el evento 
+        //Si el texto del button es decimal verifica si textDisplay ya contiene un punto decimal, si no es asi no lo agrega
+        //Si no hay punto decimal, lo agrega
         private void Button_Number_Clicks(object sender, EventArgs e)
         {
 
