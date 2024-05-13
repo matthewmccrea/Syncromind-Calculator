@@ -26,12 +26,12 @@ namespace Syncromind_Calculator
         }
 
 
-        
-        //Este metodo verifica su result no es nulo, una vez verificado. Se simula un click al Button_Equals.
-        //Si result es igual a 0, significa que es la primera operacion realizada. En ese caso se asigna el valor de TextDisplay1 a la variable result.
-        //Se obtiene una referencia de del boton que desencadena el evento utilizando 'sender'
-        //Se asigna el texto del boton a la variable operacion
-        //Se marca la variable enterValue como true. Para indicar que se espera agregar otro valor
+
+        // This method checks if result is not null, once verified. A click to the Button_Equals is simulated.
+        // If result equals 0, it means it's the first operation performed. In that case, the value of TextDisplay1 is assigned to the variable result.
+        // A reference to the button that triggers the event is obtained using 'sender'.
+        // The button's text is assigned to the variable operation.
+        // The enterValue variable is marked as true, indicating that another value is expected.
         private void Math_Operations(object sender, EventArgs e)
         {
             if (result != 0) ButtonEquals.PerformClick();
@@ -50,13 +50,13 @@ namespace Syncromind_Calculator
         }
 
 
-        //Se guarda el segundo numero ingresado en la Variable secNum,
-        //Actualiza el cuadro de texto TextDisplay2 para mostrar la operacion completa, concatenando el contenido actual de TextDisplay2 con el secNum y el signo =
-        //Verifica si TextDisplay1 no esta vacio, si el texto en Text Display1 es igual a 0, se borra el contenido del cuadro TextDisplay2
-        //Se utiliza un switch para determinar que operacion matemaitca se debe realizar.
-        //Realiza la operacion entre el primer numero, la operacion y el segundo numero
+        // The second entered number is stored in the variable secNum.
+        // Updates the TextDisplay2 text box to display the complete operation, concatenating the current content of TextDisplay2 with secNum and the = sign.
+        // Checks if TextDisplay1 is not empty, if the text in TextDisplay1 is equal to 0, the content of the TextDisplay2 text box is cleared.
+        // A switch statement is used to determine which mathematical operation should be performed.
+        // It performs the operation between the first number, the operation, and the second number.
 
-            private void Button_Equals_Click(object sender, EventArgs e)
+        private void Button_Equals_Click(object sender, EventArgs e)
         {
             secNum = TextDisplay1.Text;
             TextDisplay2.Text = $"{TextDisplay2.Text}{TextDisplay1.Text}=";
@@ -86,10 +86,10 @@ namespace Syncromind_Calculator
                 }
             }
         }
-        //Este metodo verifica si en el TextDisplay1 hay al menos un caracter.
-        //Luego elimina el ultimo caracter de la cadena
-        //Verifica si el TextDisplay1 esta vacio una vez borrado el caracter
-        //Si el cuadro de texto esta vacio establecer un 0
+        // This method checks if there is at least one character in TextDisplay1.
+        // Then it removes the last character from the string.
+        // It checks if TextDisplay1 is empty once the character is removed.
+        // If the text box is empty, it sets it to 0.
         private void Button_Erase_Click(object sender, EventArgs e)
         {
             if (TextDisplay1.Text.Length > 0)
@@ -102,7 +102,7 @@ namespace Syncromind_Calculator
 
         }
 
-        //Este metodo setea ambos DisplayText1 y DisplayText2 en 0 o empty
+        ////This method sets DisplayText1 to 0 and DisplayText2 to Empty
         private void Button_C_Click(object sender, EventArgs e)
         {
             TextDisplay1.Text = "0";
@@ -110,20 +110,29 @@ namespace Syncromind_Calculator
             result = 0;
         }
 
-        //Este metodo unicamente setea el DisplayText1 en 0
+        //This method set sonly DisplayText1 to 0
         private void Button_CE_Click(object sender, EventArgs e)
         {
             TextDisplay1.Text = "0";
         }
 
+        //This method exits App
+        private void Button_Exit_App(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
 
-        //Este metodo verifica si el texto dentro de TextDisplay1 es 0 o si enterValue es true
-        //Si los criterios se cumplen borra el contenido de TextDisplay1 en preparacion para un nuevo numero
-        //Establece en false la varibale enterValue para indicar que no es necesario ingresar nuevo valor
-        //Obtiene una referencia al boton que desencadeno el evento 
-        //Si el texto del button es decimal verifica si textDisplay ya contiene un punto decimal, si no es asi no lo agrega
-        //Si no hay punto decimal, lo agrega
+
+
+
+
+        // This method checks if the text inside TextDisplay1 is 0 or if enterValue is true
+        // If the criteria are met, it clears the content of TextDisplay1 in preparation for a new number
+        // Sets the variable enterValue to false to indicate that it's not necessary to input a new value
+        // Gets a reference to the button that triggered the event
+        // If the button's text is decimal, it checks if TextDisplay already contains a decimal point, if not, it adds it
+        // If there is no decimal point, it adds one
         private void Button_Number_Clicks(object sender, EventArgs e)
         {
 

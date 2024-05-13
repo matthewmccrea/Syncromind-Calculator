@@ -107,6 +107,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
             this.label1.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
             this.label1.Location = new System.Drawing.Point(61, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 3, 0);
             this.label1.Name = "label1";
@@ -186,6 +187,7 @@
             this.button1.Size = new System.Drawing.Size(40, 38);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button_Exit_App);
             // 
             // panel2
             // 
@@ -252,11 +254,11 @@
             // 
             // TextDisplay1
             // 
-            this.TextDisplay1.BackColor = System.Drawing.Color.Silver;
+            this.TextDisplay1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TextDisplay1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextDisplay1.Dock = System.Windows.Forms.DockStyle.Top;
             this.TextDisplay1.Font = new System.Drawing.Font("Gadugi", 30F, System.Drawing.FontStyle.Bold);
-            this.TextDisplay1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TextDisplay1.ForeColor = System.Drawing.Color.Gray;
             this.TextDisplay1.Location = new System.Drawing.Point(0, 105);
             this.TextDisplay1.Margin = new System.Windows.Forms.Padding(0);
             this.TextDisplay1.Multiline = true;
@@ -269,6 +271,7 @@
             // 
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.DarkGray;
             this.button8.Location = new System.Drawing.Point(289, 164);
             this.button8.Margin = new System.Windows.Forms.Padding(0);
             this.button8.Name = "button8";
@@ -281,6 +284,7 @@
             // 
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.DarkGray;
             this.button9.Location = new System.Drawing.Point(233, 164);
             this.button9.Margin = new System.Windows.Forms.Padding(0);
             this.button9.Name = "button9";
@@ -293,6 +297,7 @@
             // 
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.Color.DarkGray;
             this.button10.Location = new System.Drawing.Point(177, 164);
             this.button10.Margin = new System.Windows.Forms.Padding(0);
             this.button10.Name = "button10";
@@ -305,6 +310,7 @@
             // 
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.ForeColor = System.Drawing.Color.DarkGray;
             this.button12.Location = new System.Drawing.Point(121, 164);
             this.button12.Margin = new System.Windows.Forms.Padding(0);
             this.button12.Name = "button12";
@@ -317,6 +323,7 @@
             // 
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.ForeColor = System.Drawing.Color.DarkGray;
             this.button13.Location = new System.Drawing.Point(65, 164);
             this.button13.Margin = new System.Windows.Forms.Padding(0);
             this.button13.Name = "button13";
@@ -329,6 +336,7 @@
             // 
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.ForeColor = System.Drawing.Color.DarkGray;
             this.button14.Location = new System.Drawing.Point(9, 164);
             this.button14.Margin = new System.Windows.Forms.Padding(0);
             this.button14.Name = "button14";
@@ -339,7 +347,7 @@
             // 
             // ButtonCe
             // 
-            this.ButtonCe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ButtonCe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ButtonCe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonCe.FlatAppearance.BorderSize = 0;
             this.ButtonCe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -354,7 +362,7 @@
             // 
             // ButtonC
             // 
-            this.ButtonC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ButtonC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ButtonC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonC.FlatAppearance.BorderSize = 0;
             this.ButtonC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -369,7 +377,7 @@
             // 
             // button20
             // 
-            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button20.FlatAppearance.BorderSize = 0;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -397,7 +405,7 @@
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -411,7 +419,7 @@
             // 
             // ButtonDivision
             // 
-            this.ButtonDivision.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ButtonDivision.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ButtonDivision.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonDivision.FlatAppearance.BorderSize = 0;
             this.ButtonDivision.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -426,7 +434,7 @@
             // 
             // button17
             // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button17.FlatAppearance.BorderSize = 0;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -440,7 +448,7 @@
             // 
             // button18
             // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button18.FlatAppearance.BorderSize = 0;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -458,6 +466,7 @@
             this.ButtonNine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonNine.FlatAppearance.BorderSize = 0;
             this.ButtonNine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonNine.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonNine.Location = new System.Drawing.Point(190, 334);
             this.ButtonNine.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonNine.Name = "ButtonNine";
@@ -469,7 +478,7 @@
             // 
             // ButtonMultiplication
             // 
-            this.ButtonMultiplication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ButtonMultiplication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ButtonMultiplication.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonMultiplication.FlatAppearance.BorderSize = 0;
             this.ButtonMultiplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -488,6 +497,7 @@
             this.ButtonEight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonEight.FlatAppearance.BorderSize = 0;
             this.ButtonEight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonEight.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonEight.Location = new System.Drawing.Point(100, 334);
             this.ButtonEight.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonEight.Name = "ButtonEight";
@@ -503,6 +513,7 @@
             this.ButtonSeven.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonSeven.FlatAppearance.BorderSize = 0;
             this.ButtonSeven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSeven.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonSeven.Location = new System.Drawing.Point(9, 334);
             this.ButtonSeven.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonSeven.Name = "ButtonSeven";
@@ -518,6 +529,7 @@
             this.ButtonSix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonSix.FlatAppearance.BorderSize = 0;
             this.ButtonSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSix.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonSix.Location = new System.Drawing.Point(190, 394);
             this.ButtonSix.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonSix.Name = "ButtonSix";
@@ -529,7 +541,7 @@
             // 
             // ButtonSubstraction
             // 
-            this.ButtonSubstraction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ButtonSubstraction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ButtonSubstraction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonSubstraction.FlatAppearance.BorderSize = 0;
             this.ButtonSubstraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -548,6 +560,7 @@
             this.ButtonFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonFive.FlatAppearance.BorderSize = 0;
             this.ButtonFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonFive.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonFive.Location = new System.Drawing.Point(100, 394);
             this.ButtonFive.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonFive.Name = "ButtonFive";
@@ -563,6 +576,7 @@
             this.ButtonFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonFour.FlatAppearance.BorderSize = 0;
             this.ButtonFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonFour.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonFour.Location = new System.Drawing.Point(9, 394);
             this.ButtonFour.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonFour.Name = "ButtonFour";
@@ -578,6 +592,7 @@
             this.ButtonThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonThree.FlatAppearance.BorderSize = 0;
             this.ButtonThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonThree.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonThree.Location = new System.Drawing.Point(190, 454);
             this.ButtonThree.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonThree.Name = "ButtonThree";
@@ -589,7 +604,7 @@
             // 
             // ButtonAdd
             // 
-            this.ButtonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ButtonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ButtonAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonAdd.FlatAppearance.BorderSize = 0;
             this.ButtonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -608,6 +623,7 @@
             this.ButtonTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonTwo.FlatAppearance.BorderSize = 0;
             this.ButtonTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonTwo.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonTwo.Location = new System.Drawing.Point(100, 454);
             this.ButtonTwo.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonTwo.Name = "ButtonTwo";
@@ -623,6 +639,7 @@
             this.ButtonOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonOne.FlatAppearance.BorderSize = 0;
             this.ButtonOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonOne.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonOne.Location = new System.Drawing.Point(9, 454);
             this.ButtonOne.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonOne.Name = "ButtonOne";
@@ -638,6 +655,7 @@
             this.ButtonComa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonComa.FlatAppearance.BorderSize = 0;
             this.ButtonComa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonComa.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonComa.Location = new System.Drawing.Point(190, 513);
             this.ButtonComa.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonComa.Name = "ButtonComa";
@@ -668,6 +686,7 @@
             this.ButtonZero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonZero.FlatAppearance.BorderSize = 0;
             this.ButtonZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonZero.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.ButtonZero.Location = new System.Drawing.Point(100, 513);
             this.ButtonZero.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonZero.Name = "ButtonZero";
@@ -683,6 +702,7 @@
             this.button36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button36.FlatAppearance.BorderSize = 0;
             this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button36.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Bold);
             this.button36.Location = new System.Drawing.Point(9, 513);
             this.button36.Margin = new System.Windows.Forms.Padding(0);
             this.button36.Name = "button36";
