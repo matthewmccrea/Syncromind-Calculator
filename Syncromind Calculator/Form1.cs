@@ -135,26 +135,27 @@ namespace Syncromind_Calculator
         // If there is no decimal point, it adds one
         private void Button_Number_Clicks(object sender, EventArgs e)
         {
+            if (TextDisplay1.Text == "0" || enterValue)
+                TextDisplay1.Text = string.Empty;
 
-            if (TextDisplay1.Text == "0" || enterValue) TextDisplay1.Text = string.Empty;
-
-            enterValue= false;
+            enterValue = false;
 
             Button button = (Button)sender;
-            if (button.Text == ".")
+            if (button.Text == ",")
             {
-                if (TextDisplay1.Text.Contains("."))
+                // The while cicle check's if there is a coma in TextDisplay1. If there's a coma the cicle ends.
+                while (!TextDisplay1.Text.Contains(","))
+                {
                     TextDisplay1.Text = TextDisplay1.Text + button.Text;
-                
+                   
+                    break;
+                }
             }
-
-            else    TextDisplay1.Text = TextDisplay1.Text + button.Text;
-            
-
-
-
-
+            else
+            {
+                TextDisplay1.Text = TextDisplay1.Text + button.Text;
+            }
         }
 
-        }
+    }
 }
