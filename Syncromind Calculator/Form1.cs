@@ -56,34 +56,45 @@ namespace Syncromind_Calculator
         // A switch statement is used to determine which mathematical operation should be performed.
         // It performs the operation between the first number, the operation, and the second number.
 
+        bool equalPressed = false;
+
         private void Button_Equals_Click(object sender, EventArgs e)
         {
-            secNum = TextDisplay1.Text;
-            TextDisplay2.Text = $"{TextDisplay2.Text}{TextDisplay1.Text}=";
-            if (TextDisplay1.Text!=string.Empty)
+            // checks if "=" was pressed
+            if (!equalPressed)
             {
-                if (TextDisplay1.Text == "0") TextDisplay2.Text = string.Empty;
-                switch (operation) {
-
-                    case "+":
-                        TextDisplay1.Text=(result + Double.Parse(TextDisplay1.Text)).ToString(); 
-                        break;
-
-                    case "-":
-                        TextDisplay1.Text = (result - Double.Parse(TextDisplay1.Text)).ToString();
-                        break;
-
-                    case "*":
-                        TextDisplay1.Text = (result * Double.Parse(TextDisplay1.Text)).ToString();
-                        break;
-
-                    case "/":
-                        TextDisplay1.Text = (result / Double.Parse(TextDisplay1.Text)).ToString();
-                        break;
-
-                    default:TextDisplay2.Text = $"{TextDisplay1.Text}";
-                        break;
+                secNum = TextDisplay1.Text;
+                TextDisplay2.Text = $"{TextDisplay2.Text}{TextDisplay1.Text}=";
+                if (!string.IsNullOrEmpty(TextDisplay1.Text))
+                {
+                    if (TextDisplay1.Text == "0") TextDisplay2.Text = string.Empty;
+                    switch (operation)
+                    {
+                        case "+":
+                            TextDisplay1.Text = (result + Double.Parse(TextDisplay1.Text)).ToString();
+                            break;
+                        case "-":
+                            TextDisplay1.Text = (result - Double.Parse(TextDisplay1.Text)).ToString();
+                            break;
+                        case "*":
+                            TextDisplay1.Text = (result * Double.Parse(TextDisplay1.Text)).ToString();
+                            break;
+                        case "/":
+                            TextDisplay1.Text = (result / Double.Parse(TextDisplay1.Text)).ToString();
+                            break;
+                        default:
+                            TextDisplay2.Text = $"{TextDisplay1.Text}";
+                            break;
+                    }
                 }
+                // Flag that records if the equal button was pressed
+                equalPressed = true;
+            }
+            else
+            {
+                // If "=" was pressed the value of Text Display is String.Empty
+                TextDisplay2.Text = string.Empty;
+                
             }
         }
         // This method checks if there is at least one character in TextDisplay1.
@@ -108,12 +119,15 @@ namespace Syncromind_Calculator
             TextDisplay1.Text = "0";
             TextDisplay2.Text = string.Empty;
             result = 0;
+            equalPressed = false;
+
         }
 
         //This method set sonly DisplayText1 to 0
         private void Button_CE_Click(object sender, EventArgs e)
         {
             TextDisplay1.Text = "0";
+            equalPressed = false;
         }
 
         //This method exits App
